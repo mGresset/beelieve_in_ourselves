@@ -20,7 +20,7 @@ typedef struct __attribute__ ((packed)) sigfox_message {
  int16_t TempInt_3;
  int16_t TempExt;
  int16_t HumiExt;
- double Poids;
+ int16_t Poids;
 } SigfoxMessage;
 
 SigfoxMessage msg;
@@ -28,7 +28,7 @@ SigfoxMessage msg;
 // Variables utiles pour le capteur de température extérieure
 DHT dht(DHT_PIN, DHT_TYPE);
 
-// Variables utiles pour le capteur de température intérieure
+// Variables utiles pour le capteur de température intérieure Poids::float:64:little-endian
 const byte TempInt_Add_1[]  = {0x28,  0x90,  0x12,  0x56,  0xB5,  0x1,  0x3C,  0xD1};
 const byte TempInt_Add_2[]  = {0x28,  0xB0,  0xDE,  0x34,  0xC,  0x0,  0x0,  0x18};
 const byte TempInt_Add_3[]  = {0x28,  0xBD,  0x96,  0x56,  0xB5,  0x1,  0x3C,  0xF9};
@@ -38,18 +38,20 @@ OneWire  ds(5);  // on pin 10 (a 4.7K resistor is necessary)
 void setup() {
   Serial.begin(9600); // Setup console 
   Serial.println("Setup");
-  
+ // SigFox.begin();
   scale.begin(HX711_DATA_PIN, HX711_SCK_PIN); // Setup capteur de poids
   scale.set_scale();
   scale.tare();
   long zero_factor = scale.read_average();
-  
+  SigFox.status();
+  delay(1);
   dht.begin(); // Setup capteur temp ext
 }
 
 
 //------------------------------------Envoi--------------------------------------
 void send_message_sigfox(){
+  SigFox.begin();
   SigFox.beginPacket();
   SigFox.write((uint8_t*)&msg, sizeof(SigfoxMessage));
   Serial.print("Status: ");
@@ -61,10 +63,10 @@ void send_message_sigfox(){
 //-------------------------------------------Poids-----------------------------------------------
 void get_weight(){
   
-  double poids;
+  int16_t poids;
   scale.set_scale(HX711_calibration_factor); // Adjust to this calibration factor
   poids = scale.get_units(10);
-  msg.Poids = poids;
+  msg.Poids = poids*100;
   
   Serial.println("\n********   Poids   ********\n");
   Serial.print(poids);
@@ -166,11 +168,12 @@ void loop() {
   get_exterior_temperature(); 
   get_weight();
 
-  // send_message_sigfox();
-  cpt += cpt;
-  if(cpt == 2){
-    while(1);
-  }
+  send_message_sigfox();
   delay(6000);
+  cpt += cpt;
+  if(cpt == 3){
+  while(1);
+  }
+  
   
 }
