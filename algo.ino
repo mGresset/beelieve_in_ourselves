@@ -33,7 +33,7 @@ const byte TempInt_Add_1[]  = {0x28,  0x90,  0x12,  0x56,  0xB5,  0x1,  0x3C,  0
 const byte TempInt_Add_2[]  = {0x28,  0xB0,  0xDE,  0x34,  0xC,  0x0,  0x0,  0x18};
 const byte TempInt_Add_3[]  = {0x28,  0xBD,  0x96,  0x56,  0xB5,  0x1,  0x3C,  0xF9};
 OneWire  ds(5);  // on pin 10 (a 4.7K resistor is necessary)
-
+int cpt = 0;
 //------------------------------------ Setup --------------------------------------
 void setup() {
   Serial.begin(9600); // Setup console 
@@ -43,7 +43,8 @@ void setup() {
   scale.set_scale();
   scale.tare();
   long zero_factor = scale.read_average();
-  SigFox.status();
+  SigFox.debug();
+  
   delay(1);
   dht.begin(); // Setup capteur temp ext
 }
@@ -53,10 +54,12 @@ void setup() {
 void send_message_sigfox(){
   SigFox.begin();
   SigFox.beginPacket();
+  SigFox.status();
   SigFox.write((uint8_t*)&msg, sizeof(SigfoxMessage));
   Serial.print("Status: ");
   Serial.println(SigFox.endPacket());
   SigFox.end();
+  cpt = cpt + 1;
 }
 
 
@@ -154,7 +157,7 @@ void get_exterior_temperature(){
 }
 
 void loop() {
-  int cpt = 0;
+  
   Serial.println("---------------------------------------------------------------");
   
   Serial.println("********   Température Intérieure   ********");
@@ -170,8 +173,9 @@ void loop() {
 
   send_message_sigfox();
   delay(6000);
-  cpt += cpt;
-  if(cpt == 3){
+  
+  if(cpt == 2){
+  Serial.println("************************** ici ****************************************");
   while(1);
   }
   
