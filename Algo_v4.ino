@@ -3,6 +3,10 @@
 #include <OneWire.h>
 #include "HX711.h"
 
+//Define pour le temps d'envoie des messages 
+#define mSecondes 720000
+#define ndrMessages 140
+
 // Define utiles pour le capteur de température extérieure
 #define DHT_PIN 4     
 #define DHT_TYPE DHT22 
@@ -15,14 +19,13 @@ HX711 scale;
 
 // Variables utiles pour l'envoi de Sig
 typedef struct __attribute__ ((packed)) sigfox_message {
- int8_t TempInt_1;
- int8_t TempInt_2;
- int8_t TempInt_3;
+ int16_t TempInt_1;
+ int16_t TempInt_2;
+ int16_t TempInt_3;
  int8_t TempExt;
  int8_t HumiExt;
- int8_t Poids;
- int16_t ADC_PV;
- int16_t ADC_Batterie;
+ int16_t Poids;
+ int8_t ADC_Batterie;
  
 } SigfoxMessage;
 
@@ -176,7 +179,7 @@ void get_ADC_PV(){
   // print the results to the Serial Monitor:
   Serial.print("sensor = ");
   Serial.println(val_volt);
-  msg.ADC_PV = val_volt*100;
+ // msg.ADC_PV = val_volt*100;
 }
 
 //------------------------------------ADC Batterie--------------------------------------
@@ -199,25 +202,25 @@ void loop() {
   
   Serial.println("********   Température Intérieure   ********");
   Serial.println("\n******   Temp_i 1 :\n");
-  msg.TempInt_1 = get_interior_temperature(TempInt_Add_1)*2; 
+  msg.TempInt_1 = get_interior_temperature(TempInt_Add_1)*100; 
   Serial.println("\n******   Temp_i 2 :\n");
-  msg.TempInt_2 = get_interior_temperature(TempInt_Add_2)*2;
+  msg.TempInt_2 = get_interior_temperature(TempInt_Add_2)*100;
   Serial.println("\n******   Temp_i 3 :\n");
-  msg.TempInt_3 = get_interior_temperature(TempInt_Add_3)*2;
+  msg.TempInt_3 = get_interior_temperature(TempInt_Add_3)*100;
 
   get_exterior_temperature(); 
   
   get_weight();
   
-  get_ADC_PV();
+  //get_ADC_PV();
   get_ADC_Batterie();
   send_message_sigfox();
-  delay(6000);
-  
-  if(cpt == 2){
+  delay(720000);
+  Serial.println("************************** Fin de delay ****************************************");
+  /*if(cpt == 6){
   Serial.println("************************** Fin d'envoi ****************************************");
   while(1);
-  }
+  }*/
   
   
 }
