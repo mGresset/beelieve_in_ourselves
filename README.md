@@ -30,6 +30,9 @@ Here the "Bête à cornes" diagram that we made for our project.
 ![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne.PNG)
 ### General presentation
 
+Here's the final assembled system which is composed of :
+- The Hive
+- The Ba
 [Photo ruche pendant la visite]
 
 ### Project Constraints
