@@ -42,6 +42,12 @@ Here the "Bête à cornes" diagram that we made for our project.
 ### APTE Diagram
 ### WBS Diagram
 ### GANTT Chart
+
+Here is our GANTT Chart which gives a general
+
+![GANTT Diagram](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Gantt_projet_corrected.png)
+![GANTT legende](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/legende_gantt.png)
+
 ### Task Sharing
 
 ## Project Realisation
