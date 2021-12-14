@@ -30,7 +30,7 @@ Here the Bete a corne diagram that we made for our project.
 ![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne.PNG)
 ### General presentation
 
-![General Presentation](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/general_diagram.PNG)
+![General Presentation](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/general_diagram_corrected.PNG)
 
 ### Project Constraints
 
