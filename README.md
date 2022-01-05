@@ -34,7 +34,7 @@ Functional analysis is an approach that involves researching and characterizing 
 The approach is generally conducted in project mode and can be used to create (design) or improve (redesign) a product.
 Here the "Bête à cornes" diagram that we made for our project.
 
-![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne_reduit.PNG)
+![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne_final.PNG)
 
 ### Project Constraints
 #### Energy 
