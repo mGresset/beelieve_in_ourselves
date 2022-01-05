@@ -65,6 +65,9 @@ So the workforce would have cost 2400 euros.
 ![APTE](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/pieuvre.PNG)
 
 ### WBS Diagram
+
+
+![WBS](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/WBS.drawio.png)
 ### GANTT Chart
 
 Here is our GANTT Chart which gives a general
