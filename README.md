@@ -107,7 +107,12 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 ### Weight sensor choice
 ### Inside temperature sensor choice 
 ### Outside temperature and humidity sensor choice
-### Electronical Schematic
+### Electronical Schematics
+
+Here's the electronical schematic prototype on the LABDEC :
+
+![Electronical schematic LABDEC](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/schema_labdec_corrected.png)
+
 
 ## How to deploy our project
 Guide d'utilisateur
