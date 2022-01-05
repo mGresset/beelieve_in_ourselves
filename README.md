@@ -135,3 +135,15 @@ Capture d'écran Ubidots et Sigfox
 ## Conclusion
 ## Source codes
 ## Bibliography
+
+* Solar Panel : https://www.gotronic.fr/art-cellule-solaire-sol2w-18995.htm
+* LiPo Rider Pro : https://www.gotronic.fr/art-carte-lipo-rider-pro-106990008-19050.htm
+* Arduino MKR FOX 1200 : https://www.gotronic.fr/art-carte-arduino-mkr-fox-1200-abx00014-27323.htm
+* Battery Li-Ion 3,7V 1050 mAh : https://www.gotronic.fr/art-accu-li-ion-3-7-v-1050-mah-5811.htm
+* Inside temperature sensor DS18B20 : https://www.gotronic.fr/art-capteur-de-temperature-grove-101990019-23842.htm
+* Weight sensor and strain gauge HX711 : https://www.gotronic.fr/art-amplificateur-hx711-grove-101020712-31346.htm
+* Outside temperature and humidity sensors DHT22 : https://www.gotronic.fr/art-module-capteur-t-et-humidite-sen-dht22-31502.htm 
+* Electronical schematic : https://fritzing.org/
+* PCB design : https://www.autodesk.fr/
+* GANTT project : https://www.ganttproject.biz/download
+* Trello : https://trello.com/
