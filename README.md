@@ -59,7 +59,6 @@ The materials budget is near 125 euros.
 We also made the calculations for the worforce. We are a team of 4 persons and suppose that we are paid 10 euros per hour. The project duration is 60 hours.
 So the workforce would have cost 2400 euros.
 
-### Structural Diagram
 ### APTE Diagram
 
 The APTE (APplication aux Techniques d'Entreprise) diagram is used to define precisely the purpose and the objectives of the project in order to express the functions and the services provided to the users.
@@ -71,30 +70,51 @@ The APTE (APplication aux Techniques d'Entreprise) diagram is used to define pre
 The Work Breakdown Structure diagram is a structure and list of all tasks required for our project. The large tasks are broken into smaller components to separate the tasks between each member of the team. 
 
 ![WBS](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/WBS.drawio.png)
+
 ### GANTT Chart
 
 Here is our GANTT Chart which gives a general view of the timeline and steps of the project that we followed.
 
 ![GANTT Diagram](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Gantt_projet_corrected.png)
-![GANTT legende](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/legende_gantt.png)
+![GANTT legende](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/legende_gantt_r.png)
 
 ### Task Sharing
 
+Please note that Matthieu was absent during one month from the end of September until the end of October due to some personal issue.
 
+The first sessions of the project were dedicated to the study of the different components of the system and we have shared this task together.
+We also have to get familiar with Sigfox and Ubidots STEM dashboard during a practice session of four hours.
+Then we tested the different sensors, Julian took charge of the inside and outside temperature sensors while the rest of the team were occupied with the weight sensor.
+Julian was responsible of the arduino code and sending data via Sigfox.
+Oumaima was responsible of the Ubidots dashboard and set up the alerts.
+Camille handled the battery and solar panel with the code associed.
+Matthieu developped the PCB assembly and the conception of the outside temperature sensor support.
+Then, we all do our parts to assembly the whole system with the PCB such as the one wire for the inside sensors, the different welding of the cables etc...
+Camille and Oumaima have principally written the documentation of the project. At the same time, Julian and Matthieu were testing the final system.
 
 ## Project Realisation
 
 ### Sensors Presentation
+Here's a general diagram that describes how the sensors are connected to the Arduino card.
 
 ![General Presentation](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/general_diagram_corrected.PNG)
 
 ### LPWAN Network choice
+
+
 ### Iot platform choice
 ### Microcontroller choice 
 ### Weight sensor choice
 ### Inside temperature sensor choice 
 ### Outside temperature and humidity sensor choice
 ### Electronical Schematic
+
+## How to deploy our project
+Guide d'utilisateur
+
+## Some tests reports
+
+Capture d'écran Ubidots et Sigfox
 
 ## Prospects for improvements
 ## Conclusion
