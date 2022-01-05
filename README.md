@@ -82,14 +82,14 @@ Here is our GANTT Chart which gives a general view of the timeline and steps of 
 
 Please note that Matthieu was absent during one month from the end of September until the end of October due to some personal issue.
 
-The first sessions of the project were dedicated to the study of the different components of the system and we have shared this task together.
-We also have to get familiar with Sigfox and Ubidots STEM dashboard during a practice session of four hours.
-Then we tested the different sensors, Julian took charge of the inside and outside temperature sensors while the rest of the team were occupied with the weight sensor.
-Julian was responsible of the arduino code and sending data via Sigfox.
-Oumaima was responsible of the Ubidots dashboard and set up the alerts.
-Camille handled the battery and solar panel with the code associed.
-Matthieu developped the PCB assembly and the conception of the outside temperature sensor support.
-Then, we all do our parts to assembly the whole system with the PCB such as the one wire for the inside sensors, the different welding of the cables etc...
+The first sessions of the project were dedicated to the study of the different components of the system and we have shared this task together.\
+We also have to get familiar with Sigfox and Ubidots STEM dashboard during a practice session of four hours.\
+Then we tested the different sensors, Julian took charge of the inside and outside temperature sensors while the rest of the team were occupied with the weight sensor.\
+Julian was responsible of the arduino code and sending data via Sigfox.\
+Oumaima was responsible of the Ubidots dashboard and set up the alerts.\
+Camille handled the battery and solar panel with the code associed.\
+Matthieu developped the PCB assembly and the conception of the outside temperature sensor support.\
+Then, we all do our parts to assembly the whole system with the PCB such as the one wire for the inside sensors, the different welding of the cables etc...\
 Camille and Oumaima have principally written the documentation of the project. At the same time, Julian and Matthieu were testing the final system.
 
 ## Project Realisation
