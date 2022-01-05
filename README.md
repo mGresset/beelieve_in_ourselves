@@ -62,20 +62,25 @@ So the workforce would have cost 2400 euros.
 ### Structural Diagram
 ### APTE Diagram
 
-![APTE](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/pieuvre.PNG)
+The APTE (APplication aux Techniques d'Entreprise) diagram is used to define precisely the purpose and the objectives of the project in order to express the functions and the services provided to the users.
+
+![APTE](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/pieuvre_r.PNG)
 
 ### WBS Diagram
 
+The Work Breakdown Structure diagram is a structure and list of all tasks required for our project. The large tasks are broken into smaller components to separate the tasks between each member of the team. 
 
 ![WBS](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/WBS.drawio.png)
 ### GANTT Chart
 
-Here is our GANTT Chart which gives a general
+Here is our GANTT Chart which gives a general view of the timeline and steps of the project that we followed.
 
 ![GANTT Diagram](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Gantt_projet_corrected.png)
 ![GANTT legende](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/legende_gantt.png)
 
 ### Task Sharing
+
+
 
 ## Project Realisation
 
