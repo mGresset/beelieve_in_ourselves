@@ -16,6 +16,8 @@
 #define HX711_SCK_PIN  2
 float HX711_calibration_factor = 21666; //-7050 worked for my 440lb max scale setup
 HX711 scale;
+//Variables utiles pour la photo Diode
+const int photoDiode = 1;
 
 // Variables utiles pour l'envoi de Sig
 typedef struct __attribute__ ((packed)) sigfox_message {
@@ -56,6 +58,7 @@ void setup() {
   scale.tare();
   long zero_factor = scale.read_average();
   SigFox.debug();
+  
   
   delay(1);
   dht.begin(); // Setup capteur temp ext
@@ -217,10 +220,10 @@ void loop() {
   send_message_sigfox();
   delay(720000);
   Serial.println("************************** Fin de delay ****************************************");
-  if(cpt == 6){
+ /* if(cpt == 6){
     Serial.println("************************** Fin d'envoi ****************************************");
     while(1);
-  }
+  }*/
   
   
 }

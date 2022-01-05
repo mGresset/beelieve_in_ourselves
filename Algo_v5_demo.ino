@@ -9,7 +9,8 @@
 #define ndrMessages 140
 
 // Define utiles pour le capteur de température extérieure
-#define DHT_PIN 4     
+#define DHT_PINInt 7 
+#define DHT_PINExt 6   
 #define DHT_TYPE DHT22 
 
 // Variables utiles pour le capteur de poids
@@ -27,23 +28,33 @@ typedef struct __attribute__ ((packed)) sigfox_message {
  int8_t HumiExt;
  int16_t Poids;
  int8_t ADC_Batterie;
+ int8_t ADC_PhotoDiode;
  
 } SigfoxMessage;
 
 SigfoxMessage msg;
 
 // Variables utiles pour le capteur de température extérieure
-DHT dht(DHT_PIN, DHT_TYPE);
-
+DHT dhtInt(DHT_PINInt, DHT_TYPE);
+DHT dhtExt(DHT_PINExt, DHT_TYPE);
 // Variables utiles pour le capteur de température intérieure Poids::float:64:little-endian
-const byte TempInt_Add_1[]  = {0x28,  0x90,  0x12,  0x56,  0xB5,  0x1,  0x3C,  0xD1};
-const byte TempInt_Add_2[]  = {0x28,  0xB0,  0xDE,  0x34,  0xC,  0x0,  0x0,  0x18};
-const byte TempInt_Add_3[]  = {0x28,  0xBD,  0x96,  0x56,  0xB5,  0x1,  0x3C,  0xF9};
+//const byte TempInt_Add_1[]  = {0x28,  0x90,  0x12,  0x56,  0xB5,  0x1,  0x3C,  0xD1};
+//const byte TempInt_Add_2[]  = {0x28,  0xB0,  0xDE,  0x34,  0xC,  0x0,  0x0,  0x18};
+//const byte TempInt_Add_3[]  = {0x28,  0xBD,  0x96,  0x56,  0xB5,  0x1,  0x3C,  0xF9};
+const byte TempInt_Add_1[]  = {0x28,  0xB8,  0xCB,  0x6,  0x1C,  0x19,  0x1,  0x12};
+const byte TempInt_Add_2[]  = {0x28,  0xFE,  0x90,  0x14,  0x1C,  0x19,  0x1,  0xF};
+const byte TempInt_Add_3[]  = {0x28,  0xFF,  0x9F,  0xF5,  0x24,  0x17,  0x3,  0xA};
 OneWire  ds(5);  // on pin 10 (a 4.7K resistor is necessary)
 
 //Vraiables utiles pour l'ADC 
 const int analogInPinPV = A3;  // Analog input pin that the potentiometer is attached to 
 const int analogInPinBatterie = A2;
+
+//Variables utiles pour la photo Diode
+const int photoDiode = A1;
+
+//Vriable utile pour la Led
+const int Led = 1;
 
 int sensorValue = 0;        // value read from the pot
 int cpt = 0;
@@ -59,10 +70,19 @@ void setup() {
   SigFox.debug();
   
   delay(1);
-  dht.begin(); // Setup capteur temp ext
+  dhtInt.begin(); // Setup capteur temp interieur dht
+  dhtExt.begin(); // Setup capteur temp exterieur dht
+  pinMode(photoDiode, INPUT); // Photo Diode
+  pinMode(Led, OUTPUT);
+  clignioter_Led();
 }
 
-
+//------------------------------------Clignioter La Led--------------------------------------
+void clignioter_Led(){
+  digitalWrite(Led,HIGH);
+  delay(2000);
+  digitalWrite(Led,LOW);
+}
 //------------------------------------Envoi--------------------------------------
 void send_message_sigfox(){
   SigFox.begin();
@@ -78,7 +98,7 @@ void send_message_sigfox(){
 
 //-------------------------------------------Poids-----------------------------------------------
 void get_weight(){
-  
+  scale.power_up();
   float poids;
   scale.set_scale(HX711_calibration_factor); // Adjust to this calibration factor
   poids = scale.get_units(10);
@@ -98,6 +118,7 @@ void get_weight(){
     else if(temp == '-' || temp == 'z')
       HX711_calibration_factor -= 10;
   }
+  scale.power_down();
 }
 
 
@@ -149,8 +170,8 @@ void get_exterior_temperature(){
   // Wait a few seconds between measurements.
   delay(2000);
 
-  float h = dht.readHumidity();
-  float t = dht.readTemperature();
+  float h = dhtInt.readHumidity();
+  float t = dhtInt.readTemperature();
 
   msg.TempExt = t*2;
   msg.HumiExt = h;
@@ -197,6 +218,13 @@ void get_ADC_Batterie(){
   Serial.println(val_volt);
   msg.ADC_Batterie = value;
 }
+//------------------------------------ADC Photo Diode--------------------------------------
+void get_Photo_Diode(){
+  //int tmp = 
+  msg.ADC_PhotoDiode = analogRead(photoDiode);
+  Serial.println("********   Photo Diode   ********");
+  Serial.println("Photo Diode  : " + analogRead(photoDiode));
+}
 void loop() {
   
   Serial.println("---------------------------------------------------------------");
@@ -215,6 +243,10 @@ void loop() {
   
   //get_ADC_PV();
   get_ADC_Batterie();
+  
+  //get Photo Diode
+  get_Photo_Diode();
+  
   send_message_sigfox();
   LowPower.sleep(10000);
   Serial.println("************************** Fin de delay ****************************************");
