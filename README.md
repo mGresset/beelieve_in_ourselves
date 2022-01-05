@@ -34,7 +34,7 @@ Functional analysis is an approach that involves researching and characterizing 
 The approach is generally conducted in project mode and can be used to create (design) or improve (redesign) a product.
 Here the "Bête à cornes" diagram that we made for our project.
 
-![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne_final.PNG)
+![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne_r.PNG)
 
 ### Project Constraints
 #### Energy 
@@ -49,7 +49,7 @@ The materiels' precision that were given to us from school were not the same as 
 
 The hive weighs around 30kg while the strain gauge's precision is 100g.\
 The hive's heart temperature is approximately 35°C and the inside temperature sensor's precision is 0.5°C whereas in the specifications it was 0.1°C.\
-We also have measured the outside temperature with a sensor's precision equals to 0.5°C.\
+We also have measured the outside temperature with a sensor's precision equals to 0.5°C and the outside humidity sensor's precision of 2%.\
 On the battery level side, we provide to the users a precision of 1% for the battery state and 1% for the photoresistor which allows us to know the intensity light of the solar panel.
 
 #### Budget
