@@ -122,8 +122,6 @@ Here's a view of the inside box :
 
 ![PCB mis en place](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/pcb_misenplace.jpg)
 
-
-
 ## How to deploy our project
 Guide d'utilisateur
 
@@ -132,8 +130,16 @@ Guide d'utilisateur
 Capture d'écran Ubidots et Sigfox
 
 ## Prospects for improvements
+
+As a future work, we could have done the GPS option to protect the system and alert the bee-keepers in case of theft.
+
 ## Conclusion
 ## Source codes
+
+We found some examples directly on the arduino application that helps to test the sensors.
+We used the following libraries :
+* [JULIAN A FAIIIIIIRE]
+* 
 ## Bibliography
 
 * Solar Panel : https://www.gotronic.fr/art-cellule-solaire-sol2w-18995.htm
