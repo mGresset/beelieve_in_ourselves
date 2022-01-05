@@ -47,13 +47,18 @@ We use Ubidots STEAM to access to the data dashboard and sends alerts via mail w
 #### Sensors precision
 The materiels' precision that were given to us from school were not the same as the ones mentioned in the specifications. Here is the solution to respond to the needs of the project that we have suggested:
 
-The hive weighs around 30kg while the strain gauge's precision is 100g
-The hive's heart temperature is approximately 35°C and the inside temperature sensor's precision is 0.5°C whereas in the specifications it was 0.1°C.
-We also have measured the outside temperature with a sensor's precision equals to 0.5°C.
-On the battery level side,
+The hive weighs around 30kg while the strain gauge's precision is 100g.\
+The hive's heart temperature is approximately 35°C and the inside temperature sensor's precision is 0.5°C whereas in the specifications it was 0.1°C.\
+We also have measured the outside temperature with a sensor's precision equals to 0.5°C.\
+On the battery level side, we provide to the users a precision of 1% for the battery state and 1% for the photoresistor which allows us to know the intensity light of the solar panel.
 
-État	de	la	batterie
 #### Budget
+The sensors were given to us but we made some calculations of their costs to have an idea about the global project costs.
+The materials budget is near 125 euros.
+
+We also made the calculations for the worforce. We are a team of 4 persons and suppose that we are paid 10 euros per hour. The project duration is 60 hours.
+So the workforce would have cost 2400 euros.
+
 ### Structural Diagram
 ### APTE Diagram
 ### WBS Diagram
