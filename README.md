@@ -25,7 +25,7 @@ The Arduino card is powered by a battery which is charged by a solar panel.
 Data are graphically accessible from a web interface on PC Desktop thanks to the Sigfox antenna. \
 The system is also able to send alerts to your smartphone by mail when abnormal behaviour is detected such as low battery level.
 
-[Photo ruche pendant la visite]
+![Photo ruche pendant la visite](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/projet_deploye.png)
 
 ## Specifications
 ### "Bête à cornes" diagram
