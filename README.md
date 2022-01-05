@@ -114,6 +114,16 @@ Here's the electronical schematic prototype on the LABDEC :
 ![Electronical schematic LABDEC](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/schema_labdec_corrected.png)
 
 
+In order to make the system robuster, we had add improvements to our project and replaced the LABDEC with a PCB card :
+
+![PCB conception](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/PCB.png)
+
+Here's a view of the inside box :
+
+![PCB mis en place](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/pcb_misenplace.jpg)
+
+
+
 ## How to deploy our project
 Guide d'utilisateur
 
