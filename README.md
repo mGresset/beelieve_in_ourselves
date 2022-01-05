@@ -37,7 +37,23 @@ Here the "Bête à cornes" diagram that we made for our project.
 ![bete_a_corne](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/bete_a_corne.PNG)
 
 ### Project Constraints
+#### Energy 
+The system is powered by a battery which is charged by a solar panel. Moreover, we have to make sure that the solar intensity is well enough during the day in order to make our system autonomous. In addition, we have an on/off button to control the whole system.
+#### LPWAN Communication and Cloud Platform
+We use the Sigfox technology in order to get the data from the sensors. We are limited to 140 messages per day for our device that is why we send data each 12 minutes.
 
+We use Ubidots STEAM to access to the data dashboard and sends alerts via mail when abnormal behaviour is detected such as low battery level.
+
+#### Sensors precision
+The materiels' precision that were given to us from school were not the same as the ones mentioned in the specifications. Here is the solution to respond to the needs of the project that we have suggested:
+
+The hive weighs around 30kg while the strain gauge's precision is 100g
+The hive's heart temperature is approximately 35°C and the inside temperature sensor's precision is 0.5°C whereas in the specifications it was 0.1°C.
+We also have measured the outside temperature with a sensor's precision equals to 0.5°C.
+On the battery level side,
+
+État	de	la	batterie
+#### Budget
 ### Structural Diagram
 ### APTE Diagram
 ### WBS Diagram
