@@ -114,7 +114,7 @@ Here's the electronical schematic prototype on the LABDEC :
 ![Electronical schematic LABDEC](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/schema_labdec_corrected.png)
 
 
-In order to make the system more robust, we had add improvements to our project and replaced the LABDEC with a PCB card :
+In order to make the system more robust, we had to add improvements to our project and replace the LABDEC with a PCB card :
 
 ![PCB conception](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/PCB.png)
 
