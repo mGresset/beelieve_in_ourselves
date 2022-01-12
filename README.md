@@ -114,7 +114,7 @@ Here's the electronical schematic prototype on the LABDEC :
 ![Electronical schematic LABDEC](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/schema_labdec_corrected.png)
 
 
-In order to make the system robuster, we had add improvements to our project and replaced the LABDEC with a PCB card :
+In order to make the system more robust, we had add improvements to our project and replaced the LABDEC with a PCB card :
 
 ![PCB conception](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/PCB.png)
 
@@ -128,8 +128,6 @@ Guide d'utilisateur
 ## Some tests reports
 
 Capture d'écran Ubidots et Sigfox
-![image](https://user-images.githubusercontent.com/71441641/149123782-95af5cb6-864f-44a5-82ad-70c14db7af16.png)
-The screenshot above shows a test in real environment using all the sensors. 
 
 Firstly, we will go through the test process of each element and the codes used. Secondly, we will explain the data collected form the test realized in the final environment over a week. 
 In order to minimize the problems in our system, we have tested each sensor separately. Using the example codes provided by the sensor’s library, we have firstly verified if the sensor working normally and giving reasonable readout. This method helped us to establish an idea on what code elements are needed in order to retrieve and send the data from each sensor. 
@@ -151,6 +149,25 @@ Multiple tests were done to ensure that all the aspects of the sensor’s readou
 The code used to retrieve the data from the battery and the photodiode were fairly simple, however some tests were done in order to send a “usable” information to Sigfox server. Indeed, the data retrieved is simply the analog readout from the AD converter, so we had to treat this data to represent it in a value between 0 and 100. 
 Based on the battery datasheet, we have used an external voltage source to simulate the battery input with the maximum and minimum voltage. This simulation allowed us to determine the mathematical formula to use in order to convert the readout to a 0 to 100 scale. 
 We have also used the photodiode datasheet to determine its theoretical maximum and minimum voltage outputs. Although we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. We have established the formula according to the results retrieved form this experience. 
+
+* Our Week experiment  
+![image](https://user-images.githubusercontent.com/71441641/149156879-e080b675-9524-4a98-9c38-b11e3e1c5a4f.png)
+
+The screen shot above shows the data received in the Sigfox server containing the data from all the sensors. In order to have the precision mentioned for each sensor above, we have multiplied the redouts of all the temperature sensors by 2 to have a precision of +-0.5°. To have a +- 0.1 Kg precision for the weight sensor we have multiplied the redout by 100. 
+
+![image](https://user-images.githubusercontent.com/71441641/149156936-d0e4cacb-62d5-49b0-a7f6-5d49903e912f.png)
+
+The experience that took place over the last week represented a perfect test to verify that our system will be functional in all conditions. As shown by the graph the first day of the test the temperatures were not very low with a normal humidity level. As the night started to fall, we were able to test our system in below freezing temperature without any issue. In addition, our system encountered serval rainy days varying from light to rather heavy rain. 
+
+![image](https://user-images.githubusercontent.com/71441641/149156986-199b34d3-e620-4f74-abb3-401feb43f09a.png)
+
+This experience ensured us about the autonomy of our system, knowing that we started it with about 50% of battery level. As shown in graph during the week the battery did not reach any critical level as it stayed above 50%. The second and third day of the experience were sunny in part of the day, so we were able to confirm that the solar panel is able to fully charge the battery in a relatively short time. In addition, we were able to conclude that the system could go through many days with clouds covering the sun during the entirety of the day, and even heavy fog as it was the case on the 11th of January. 
+
+![image](https://user-images.githubusercontent.com/71441641/149157056-c3bacb49-c7da-4e91-ae4b-235726bfe919.png)
+
+Unfortunately, we were not able to test the weight sensor in a variety of situations, as the bees do not leave the hive in theses temperatures. Although we were able to conclude that the sensor worked without any issue during the week as the readouts did not show any anomaly caused be the elements.
+
+
 
 
 
