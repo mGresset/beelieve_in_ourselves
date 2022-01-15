@@ -167,7 +167,7 @@ Based on the battery datasheet, we have used an external voltage source to simul
 We have also used the photodiode datasheet to determine its theoretical maximum and minimum voltage outputs. Although we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. We have established the formula according to the results retrieved form this experience. 
 
 ### Our Week experiment  
-![image](https://user-images.githubusercontent.com/71441641/149156879-e080b675-9524-4a98-9c38-b11e3e1c5a4f.png)
+![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/sigfox_trame.png)
 
 The screen shot above shows the data received in the Sigfox server containing the data from all the sensors. In order to have the precision mentioned for each sensor above, we have multiplied the redouts of all the temperature sensors by 2 to have a precision of +-0.5°. To have a +- 0.1 Kg precision for the weight sensor we have multiplied the redout by 100. 
 
