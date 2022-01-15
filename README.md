@@ -109,7 +109,15 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 ![Microcontroller](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_mkrfox1.PNG)
 
 ### Weight sensor choice
+
+To measure the weight of the hive, we used a strain gauge.
+
 ![Weight sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_capteur_poids1.PNG)
+
+The strain gauge is an amplifier module for weight sensors with a Wheatstone bridge based on an analog-to-digital converter HX711.
+This sensor communicates with an Arduino microcontroller via a two-pin digital interface.
+
+This sensor allows us to read the resistance changes of the weight sensor, which will give us precise measurements after calibration.
 
 ### Inside temperature sensor choice 
 ![Inside temperature sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_inside_temp1.PNG)
