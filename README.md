@@ -100,7 +100,7 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 ![General Presentation](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/general_diagram_corrected.PNG)
 
 ### LPWAN Network choice
-![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_Logo.png)
+![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_logo.jpg)
 
 ### Iot platform choice
 ![Ubidots](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/logo_ubidots.png)
