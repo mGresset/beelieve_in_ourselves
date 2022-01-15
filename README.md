@@ -174,26 +174,44 @@ Guide d'utilisateur
 
 Capture d'écran Ubidots et Sigfox
 
-Firstly, we will go through the test process of each element and the codes used. Secondly, we will explain the data collected form the test realized in the final environment over a week. 
-In order to minimize the problems in our system, we have tested each sensor separately. Using the example codes provided by the sensor’s library, we have firstly verified if the sensor working normally and giving reasonable readout. This method helped us to establish an idea on what code elements are needed in order to retrieve and send the data from each sensor. 
+Firstly, we will go through the test process of each element and the codes used. Secondly, we will explain the data collected form the test realized in the final environment over a week. \
+In order to minimize the problems in our system, we have tested each sensor separately.\
+Using the example codes provided by the sensor’s library, we have firstly verified if the sensor working normally and giving reasonable readout.\
+This method helped us to establish an idea on what code elements are needed in order to retrieve and send the data from each sensor. 
 
 ### DHT
 
-Our first test was done on the DHT sensor using the “DHTtester” code provided by its library. The readout of the sensor was successfully retrieved after figuring out how to connect it to our Sigfox module. This test was done in the first “TP” session, where we used a simple test code provided by the Sigfox library in order to send the DHT readout to Sigfox Backend server. We were able to conclude through the test the necessary elements to implement to initiate the connection with the Sigfox server, in addition to the command lines that allow us to send a data structure containing multiple readouts at a time. 
+Our first test was done on the DHT sensor using the “DHTtester” code provided by its library. \
+The readout of the sensor was successfully retrieved after figuring out how to connect it to our Sigfox module. \
+This test was done in the first “TP” session, where we used a simple test code provided by the Sigfox library in order to send the DHT readout to Sigfox Backend server. 
+
+We were able to conclude through the test the necessary elements to implement to initiate the connection with the Sigfox server, in addition to the command lines that allow us to send a data structure containing multiple readouts at a time. 
 
 ### OneWire
 
-The test of the OneWire sensors followed the same method, and had similar results as the DHT sensor. Nevertheless, we had to do an additional test to the OneWire sensors in order to connect the 3 of them on a single pin. To do so, we used a specific section of the “DS18x20_Temperature” to retrieve the addresses of each sensor, and store them in 3 constants in our final code.  
+The test of the OneWire sensors followed the same method, and had similar results as the DHT sensor.\
+Nevertheless, we had to do an additional test to the OneWire sensors in order to connect the 3 of them on a single pin. \
+To do so, we used a specific section of the “DS18x20_Temperature” to retrieve the addresses of each sensor, and store them in 3 constants in our final code.  
 
 ### HX711
 
-Multiple tests were done to ensure that all the aspects of the sensor’s readout comply with our specifications. After doing some online search, we have found an example code that allows to calibrate the sensor. We have put a known on the sensor and adjust the calibration factor to obtain a precise readout. The code provides also the Zero calibration factor, which allows the sensor to have readouts even if there is a weight already on the sensor while turning it on. After these tests we implemented the factors in constants in our code. 
+Multiple tests were done to ensure that all the aspects of the sensor’s readout comply with our specifications.\
+After doing some online search, we have found an example code that allows to calibrate the sensor. \
+We have put a known on the sensor and adjust the calibration factor to obtain a precise readout. \
+The code provides also the Zero calibration factor, which allows the sensor to have readouts even if there is a weight already on the sensor while turning it on. \
+After these tests we implemented the factors in constants in our code. 
 
 ### Battery and Photodiode
 
-The code used to retrieve the data from the battery and the photodiode were fairly simple, however some tests were done in order to send a “usable” information to Sigfox server. Indeed, the data retrieved is simply the analog readout from the AD converter, so we had to treat this data to represent it in a value between 0 and 100. 
-Based on the battery datasheet, we have used an external voltage source to simulate the battery input with the maximum and minimum voltage. This simulation allowed us to determine the mathematical formula to use in order to convert the readout to a 0 to 100 scale. 
-We have also used the photodiode datasheet to determine its theoretical maximum and minimum voltage outputs. Although we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. We have established the formula according to the results retrieved form this experience. 
+The code used to retrieve the data from the battery and the photodiode were fairly simple, however some tests were done in order to send a “usable” information to Sigfox server.\
+Indeed, the data retrieved is simply the analog readout from the AD converter, so we had to treat this data to represent it in a value between 0 and 100. 
+
+Based on the battery datasheet, we have used an external voltage source to simulate the battery input with the maximum and minimum voltage. \
+This simulation allowed us to determine the mathematical formula to use in order to convert the readout to a 0 to 100 scale. 
+
+We have also used the photodiode datasheet to determine its theoretical maximum and minimum voltage outputs.\
+Although we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. \
+We have established the formula according to the results retrieved form this experience. 
 
 ### Our Week experiment  
 ![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/sigfox_trame.png)
