@@ -103,7 +103,7 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 ![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_logo.jpg)
 
 ### Iot platform choice
-![Ubidots](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/logo_ubidots.png)
+![Ubidots](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots_logo.jpg)
 
 ### Microcontroller choice 
 ![Microcontroller](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_mkrfox1.PNG)
