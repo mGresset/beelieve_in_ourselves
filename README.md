@@ -110,13 +110,17 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 
 ### Weight sensor choice
 
-To measure the weight of the hive, we used a strain gauge.
+To measure the weight of the hive, we used a strain gauge and a load cell.\
+A load cell is an instrument that helps to determine the size of a load (either a force or weight) and converts the force into measurable electrical output.\
+A load cell consists of a metal core and a set of electrical resistances that transform when a force is applied to it. But after the force is removed, it returns to its original state. \
+To use a load cell, we have calibrate it first to get your correct weight using a microcontroller or microprocessor.
+
+The HX711 strain gauge is a precision 24-bit analog-to-digital converter (ADC) that is designed for weighing scales and industrial control applications to interface directly with a Wheatstone bridge sensor.
 
 ![Weight sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_capteur_poids1.PNG)
 
-The strain gauge is an amplifier module for weight sensors with a Wheatstone bridge based on an analog-to-digital converter HX711.
-This sensor communicates with an Arduino microcontroller via a two-pin digital interface.
-
+This sensor communicates with an Arduino microcontroller via a two-pin digital interface.\
+The power supply of the strain gauge is possible from 2.6 to 5,5 Vcc.\
 This sensor allows us to read the resistance changes of the weight sensor, which will give us precise measurements after calibration.
 
 ### Inside temperature sensor choice 
