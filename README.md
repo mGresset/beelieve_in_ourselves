@@ -120,9 +120,19 @@ This sensor communicates with an Arduino microcontroller via a two-pin digital i
 This sensor allows us to read the resistance changes of the weight sensor, which will give us precise measurements after calibration.
 
 ### Inside temperature sensor choice 
+
+This waterproof temperature sensor is based on the DS18B20 circuit with a measurement range of -55°C to +125°C. It digitally returns a 12-bit temperature in degrees Celsius. This type of sensor has the advantage of having a cylindrical shape with a small radius, which makes it possible to put several of them in a hive without having too much of an impact on the living environment of the bees. It is also possible to connect several at the same time using a One-Wires system. Indeed, each sensor has a unique 64-bit address, which reduces the cables between the card and the hive. It allows temperature measurement with an accuracy of 0.5°C and is powered between 3Vdc and 5Vdc. Thus it makes it possible to meet the constraints of the specifications on all points.
+
 ![Inside temperature sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_inside_temp1.PNG)
+
+
 ### Outside temperature and humidity sensor choice
+
+This sensor measures ambient air humidity and temperature with its capacitive humidity probe and thermistor and displays a digital signal output. It allows temperature measurement between -40 and 80°C with an accuracy of 0.5°C. Regarding humidity, the sensor returns a value between 0 and 100% with an accuracy of 2% humidity in the air. The DHT22 is powered between 3.3 and 5Vdc and has the advantage of having low current consumption. It therefore perfectly meets the specifications of the project concerning the measurement of temperature and humidity outside. Moreover, it is one of the most used temperature sensors in different projects and there is a lot of documentation on it available. It is water resistant so it can be placed outdoors. It is preferable, in order to improve this tightness, to manufacture a support which makes it possible to protect the sensor from the rain.
+
 ![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_dht1.PNG)
+
+
 ### Electronical Schematics
 
 Here's the electronical schematic prototype on the LABDEC :
