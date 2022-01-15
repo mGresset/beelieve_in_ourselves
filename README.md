@@ -113,6 +113,8 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 
 ### Inside temperature sensor choice 
 ![Inside temperature sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_inside_temp1.PNG)
+Test Matthieu
+
 ### Outside temperature and humidity sensor choice
 ![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_dht1.PNG)
 ### Electronical Schematics
