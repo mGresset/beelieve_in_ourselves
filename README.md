@@ -123,7 +123,7 @@ This waterproof temperature sensor is based on the DS18B20 circuit with a measur
 This sensor measures ambient air humidity and temperature with its capacitive humidity probe and thermistor and displays a digital signal output. It allows temperature measurement between -40 and 80°C with an accuracy of 0.5°C. Regarding humidity, the sensor returns a value between 0 and 100% with an accuracy of 2% humidity in the air. The DHT22 is powered between 3.3 and 5Vdc and has the advantage of having low current consumption. It therefore perfectly meets the specifications of the project concerning the measurement of temperature and humidity outside. Moreover, it is one of the most used temperature sensors in different projects and there is a lot of documentation on it available. It is water resistant so it can be placed outdoors. It is preferable, in order to improve this tightness, to manufacture a support which makes it possible to protect the sensor from the rain.
 
 ![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_dht1.PNG)
-
+ 
 
 ### Electronical Schematics
 
