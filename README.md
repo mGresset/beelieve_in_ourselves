@@ -171,15 +171,15 @@ We have also used the photodiode datasheet to determine its theoretical maximum 
 
 The screen shot above shows the data received in the Sigfox server containing the data from all the sensors. In order to have the precision mentioned for each sensor above, we have multiplied the redouts of all the temperature sensors by 2 to have a precision of +-0.5°. To have a +- 0.1 Kg precision for the weight sensor we have multiplied the redout by 100. 
 
-![image](https://user-images.githubusercontent.com/71441641/149156936-d0e4cacb-62d5-49b0-a7f6-5d49903e912f.png)
+![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots1.png)
 
 The experience that took place over the last week represented a perfect test to verify that our system will be functional in all conditions. As shown by the graph the first day of the test the temperatures were not very low with a normal humidity level. As the night started to fall, we were able to test our system in below freezing temperature without any issue. In addition, our system encountered serval rainy days varying from light to rather heavy rain. 
 
-![image](https://user-images.githubusercontent.com/71441641/149156986-199b34d3-e620-4f74-abb3-401feb43f09a.png)
+![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots2.png)
 
 This experience ensured us about the autonomy of our system, knowing that we started it with about 50% of battery level. As shown in graph during the week the battery did not reach any critical level as it stayed above 50%. The second and third day of the experience were sunny in part of the day, so we were able to confirm that the solar panel is able to fully charge the battery in a relatively short time. In addition, we were able to conclude that the system could go through many days with clouds covering the sun during the entirety of the day, and even heavy fog as it was the case on the 11th of January. 
 
-![image](https://user-images.githubusercontent.com/71441641/149157056-c3bacb49-c7da-4e91-ae4b-235726bfe919.png)
+![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots3.png)
 
 Unfortunately, we were not able to test the weight sensor in a variety of situations, as the bees do not leave the hive in theses temperatures. Although we were able to conclude that the sensor worked without any issue during the week as the readouts did not show any anomaly caused be the elements.
 
