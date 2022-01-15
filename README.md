@@ -97,7 +97,7 @@ Camille and Oumaima have principally written the documentation of the project. A
 ### Sensors Presentation
 Here's a general diagram that describes how the sensors are connected to the Arduino card.
 
-![General Presentation](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/general_diagram_corrected.PNG)
+![General Presentation](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/general_schema.PNG)
 
 ### LPWAN Network choice
 ![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_logo.jpg)
