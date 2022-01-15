@@ -151,6 +151,7 @@ It is water resistant so it can be placed outdoors. \
 It is preferable, in order to improve this tightness, to manufacture a support which makes it possible to protect the sensor from the rain.
 
 ![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/modelisation_dht.png)
+
 ### Electronical Schematics
 
 Here's the electronical schematic prototype on the LABDEC :
