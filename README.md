@@ -223,7 +223,7 @@ It was an opportunity for some to learn how to weld or to understand how to desi
 
 In the programming field, we were able to experiment with the implementation and management of several sensors with Arduino, each of which has its own specificity.
 
-It was also an opportunity for us to put our ingenuity into practice by designing a 3D printed medium for the PDB as well as the outdoor temperature sensor.
+It was also an opportunity for us to put our ingenuity into practice by designing a 3D printed medium for the PDB as well as the outside temperature sensor.
 
 We were able to implement a complete system thanks to Sigfox and Ubidots technologies. 
 
