@@ -144,7 +144,6 @@ The DHT22 is powered between 3.3 and 5Vdc and has the advantage of having low cu
 It therefore perfectly meets the specifications of the project concerning the measurement of temperature and humidity outside.\
 Moreover, it is one of the most used temperature sensors in different projects and there is a lot of documentation on it available. 
 
-
 ![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_dht1.PNG)
 
 It is water resistant so it can be placed outdoors. \
