@@ -214,6 +214,20 @@ Unfortunately, we were not able to test the weight sensor in a variety of situat
 As a future work, we could have done the GPS option to protect the system and alert the bee-keepers in case of theft.
 
 ## Conclusion
+Through this project, we have acquired many skills.
+
+We first put into practice technical knowledge in electronics with the installation and use of several sensors. \
+It was an opportunity for some to learn how to weld or to understand how to design a PCB for example. 
+
+In the programming field, we were able to experiment with the implementation and management of several sensors with Arduino, each of which has its own specificity.
+
+It was also an opportunity for us to put our ingenuity into practice by designing a 3D printed medium for the PDB as well as the outdoor temperature sensor.
+
+We were able to implement a complete system thanks to Sigfox and Ubidots technologies. 
+
+Finally, this project allowed us to learn to meet the needs of a client, here the beekeepers, in a collective way. 
+Seeing our project deployed and functional is very rewarding for the team. We hope it will remain usable for a long time and will be useful to beekeepers.
+
 ## Source codes
 
 We found some examples directly on the arduino application that helps to test the sensors.
