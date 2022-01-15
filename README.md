@@ -104,15 +104,15 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 
 ### Iot platform choice
 ### Microcontroller choice 
-![Microcontroller](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_mkrfox.PNG)
+![Microcontroller](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_mkrfox1.PNG)
 
 ### Weight sensor choice
-![Weight sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_capteur_poids.PNG)
+![Weight sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_capteur_poids1.PNG)
 
 ### Inside temperature sensor choice 
-![Inside temperature sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_inside_temp.PNG)
+![Inside temperature sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_inside_temp1.PNG)
 ### Outside temperature and humidity sensor choice
-![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_dht.PNG)
+![Outside temperature and humidity sensor](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/photo_dht1.PNG)
 ### Electronical Schematics
 
 Here's the electronical schematic prototype on the LABDEC :
