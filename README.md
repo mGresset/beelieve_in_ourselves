@@ -213,7 +213,7 @@ Based on the battery datasheet, we have used an external voltage source to simul
 This simulation allowed us to determine the mathematical formula to use in order to convert the readout to a 0 to 100 scale. 
 
 We have also used the photodiode datasheet to determine its theoretical maximum and minimum voltage outputs.\
-Although we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. \
+Moreover, we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. \
 We have established the formula according to the results retrieved form this experience. 
 
 ### Our Week experiment  
@@ -225,7 +225,7 @@ To have a +- 0.1 Kg precision for the weight sensor we have multiplied the redou
 
 ![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots1.jpg)
 
-The experience that took place over the last week represented a perfect test to verify that our system will be functional in all conditions.\
+The experience that took place over the last week represented a perfect test to verify and to proove that our system will be functional in all conditions.\
 As shown by the graph the first day of the test the temperatures were not very low with a normal humidity level.\
 As the night started to fall, we were able to test our system in below freezing temperature without any issue. \
 In addition, our system encountered serval rainy days varying from light to rather heavy rain. 
@@ -234,13 +234,13 @@ In addition, our system encountered serval rainy days varying from light to rath
 
 This experience ensured us about the autonomy of our system, knowing that we started it with about 50% of battery level. \
 As shown in graph during the week the battery did not reach any critical level as it stayed above 50%. \
-The second and third day of the experience were sunny in part of the day, so we were able to confirm that the solar panel is able to fully charge the battery in a relatively short time. \
+The second and third day of the experience, the weather was sunny in part of the day, so we were able to confirm that the solar panel is able to fully charge the battery in a relatively short time. \
 In addition, we were able to conclude that the system could go through many days with clouds covering the sun during the entirety of the day, and even heavy fog as it was the case on the 11th of January. 
 
 ![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots3.jpg)
 
 Unfortunately, we were not able to test the weight sensor in a variety of situations, as the bees do not leave the hive in theses temperatures.\
-Although we were able to conclude that the sensor worked without any issue during the week as the readouts did not show any anomaly caused be the elements.
+Not to mention, we were able to conclude that the sensor worked without any issue during the week as the readouts did not show any anomaly caused be the elements.
 
 ## Prospects for improvements
 
