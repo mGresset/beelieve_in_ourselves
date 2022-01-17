@@ -101,8 +101,6 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 
 ### LPWAN Network choice
 ![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_logo.jpg)
-In order to share the data with the beekeepers via a dashboards, we have decided to use LPWAN Sigfox; Low Power Wide Area Network.
-Low Power because its consumption is between 15 and 40mA during few seconds of the communication and only few µA while sleep mode.
 
 ### Iot platform choice
 ![Ubidots](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots_logo.jpg)
@@ -172,8 +170,62 @@ Here's a view of the inside box :
 
 ![PCB mis en place](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/pcb_misenplace.jpg)
 
+
+
 ## How to deploy our project
-Guide d'utilisateur
+
+At the end of the realization, our project is composed of several elements:
+- A waterproof box containing the electronic card, the Sigfox module and the battery
+- A solar panel – photodiode assembly
+- The outdoor temperature and humidity sensor in its support
+- Temperature sensors inside the hive
+- The H-shaped weight sensor
+
+### Deployement
+
+To deploy our project, we must first install the internal temperature sensors in the hive as shown in this photo:
+
+<img src="https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Internal_sensor.jpeg" width=500>
+
+Then, you have to go up the upper part of the hive then place the weight sensor between it and the support while being careful not to pinch the cable:
+
+<img src="https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Weigth_sensor.JPG" width=500>
+
+Once the hive is placed on the weight sensor, the solar panel must be placed on the roof of the hive and preferably towards the south. Once this step has been completed, the cables must be routed correctly and the waterproof box containing the electronic card placed near to the weight sensor. This protects the box from heavy rain or other bad weather.
+
+<img src="https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Electronic_box.JPG" width=500>
+
+Finally, the outside temperature sensor can be fixed on one side of the hive using screws.
+
+### Start up
+
+Before switching on, allow the system battery to charge for at least one day.
+As soon as the battery is sufficiently charged, simply turn on the system by placing the switch, located on the side of the waterproof box, on “I”.
+
+At this time, the green LED located next to this switch will light up for 2 seconds. This confirms the correct initialization of the system. As soon as the LED goes out, the system acquires the first data and sends it to the visualization interface.
+The system is now autonomous and will perform a data acquisition every 12 minutes.
+
+### System shutdown
+
+In order to turn off this system, simply place the switch on the "0" position.
+This cuts the current from arriving on the board. On the other hand, the solar panel will continue to charge the battery even if the system is off.
+
+### Data observation
+
+In order to observe the data acquired by the various sensors placed around the hive, you must connect to the website: https://industrial.ubidots.com/accounts/signin/
+The identifiers are as follows:
+- ID: PolytechCamille
+- Password: Sigfox21#
+
+The dashboard page is displayed on which you will find all the information concerning the hive. You will find :
+- A real-time image of the battery level and the outside temperature.
+- A graph to observe the temperature and humidity outside.
+- A graph representing the internal temperature of the hive with the 3 sensors
+- A graph to observe the evolution of the weight of the hive
+- A graph representing the battery charge
+- A graph to see the sunshine.
+
+
 
 ## Some tests reports
 
@@ -215,7 +267,7 @@ Based on the battery datasheet, we have used an external voltage source to simul
 This simulation allowed us to determine the mathematical formula to use in order to convert the readout to a 0 to 100 scale. 
 
 We have also used the photodiode datasheet to determine its theoretical maximum and minimum voltage outputs.\
-Moreover, we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. \
+Although we had to do an experience in a “realistic environment” by exposing the photodiode to high luminist flash, and isolating the photodiode to simulate the day and night conditions. \
 We have established the formula according to the results retrieved form this experience. 
 
 ### Our Week experiment  
@@ -227,7 +279,7 @@ To have a +- 0.1 Kg precision for the weight sensor we have multiplied the redou
 
 ![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots1.jpg)
 
-The experience that took place over the last week represented a perfect test to verify and to proove that our system will be functional in all conditions.\
+The experience that took place over the last week represented a perfect test to verify that our system will be functional in all conditions.\
 As shown by the graph the first day of the test the temperatures were not very low with a normal humidity level.\
 As the night started to fall, we were able to test our system in below freezing temperature without any issue. \
 In addition, our system encountered serval rainy days varying from light to rather heavy rain. 
@@ -236,13 +288,13 @@ In addition, our system encountered serval rainy days varying from light to rath
 
 This experience ensured us about the autonomy of our system, knowing that we started it with about 50% of battery level. \
 As shown in graph during the week the battery did not reach any critical level as it stayed above 50%. \
-The second and third day of the experience, the weather was sunny in part of the day, so we were able to confirm that the solar panel is able to fully charge the battery in a relatively short time. \
+The second and third day of the experience were sunny in part of the day, so we were able to confirm that the solar panel is able to fully charge the battery in a relatively short time. \
 In addition, we were able to conclude that the system could go through many days with clouds covering the sun during the entirety of the day, and even heavy fog as it was the case on the 11th of January. 
 
 ![image](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots3.jpg)
 
 Unfortunately, we were not able to test the weight sensor in a variety of situations, as the bees do not leave the hive in theses temperatures.\
-Not to mention, we were able to conclude that the sensor worked without any issue during the week as the readouts did not show any anomaly caused be the elements.
+Although we were able to conclude that the sensor worked without any issue during the week as the readouts did not show any anomaly caused be the elements.
 
 ## Prospects for improvements
 
