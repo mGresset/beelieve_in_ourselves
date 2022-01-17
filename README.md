@@ -106,7 +106,6 @@ Low Power because its consumption is between 15 and 40mA during few seconds of t
 
 ![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_logo.jpg)
 
-
 ### Iot platform choice
 ![Ubidots](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots_logo.jpg)
 
