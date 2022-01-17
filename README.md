@@ -101,6 +101,8 @@ Here's a general diagram that describes how the sensors are connected to the Ard
 
 ### LPWAN Network choice
 ![Sigfox](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/Sigfox_logo.jpg)
+In order to share the data with the beekeepers via a dashboards, we have decided to use LPWAN Sigfox; Low Power Wide Area Network.
+Low Power because its consumption is between 15 and 40mA during few seconds of the communication and only few µA while sleep mode.
 
 ### Iot platform choice
 ![Ubidots](https://github.com/CamilleDouzet/beelieve_in_ourselves/blob/main/image/ubidots_logo.jpg)
